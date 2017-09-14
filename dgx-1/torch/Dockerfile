@@ -19,7 +19,10 @@ RUN apt-get update && apt-get install -y \
 # RUN pip install h5py
 
 # Torch packages
-RUN luarocks install hdf5
+RUN git clone https://github.com/davek44/torch-hdf5.git /root/torch-hdf5
+WORKDIR /root/torch-hdf5
+RUN luarocks make
+# RUN luarocks install hdf5
 # RUN luarocks install torchx 
 # RUN luarocks install torch
 RUN luarocks install matio
@@ -31,3 +34,4 @@ RUN luarocks install matio
 
 # enviromnet
 ENV OMP_NUM_THREADS=2
+WORKDIR /workspace
