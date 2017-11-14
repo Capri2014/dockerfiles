@@ -26,5 +26,6 @@ WORKDIR /root/git-lfs-2.3.4
 RUN ./install.sh
 
 # environment
+RUN git config --global credential.helper cache
 WORKDIR /workspace
 ENV OMP_NUM_THREADS=2
