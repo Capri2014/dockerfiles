@@ -17,6 +17,7 @@ RUN pip install h5py matplotlib lmdb
 RUN pip uninstall torch -y
 RUN pip install http://download.pytorch.org/whl/cu80/torch-0.2.0.post3-cp35-cp35m-manylinux1_x86_64.whl 
 RUN pip install torchvision
+RUN pip install sklearn
 
 # git lfs
 WORKDIR /root
