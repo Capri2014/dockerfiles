@@ -15,7 +15,8 @@ RUN pip install h5py matplotlib lmdb
 
 # get the latest pytorch
 RUN pip uninstall torch -y
-RUN pip install http://download.pytorch.org/whl/cu80/torch-0.2.0.post3-cp35-cp35m-manylinux1_x86_64.whl 
+# RUN pip install http://download.pytorch.org/whl/cu80/torch-0.2.0.post3-cp35-cp35m-manylinux1_x86_64.whl 
+RUN pip install http://download.pytorch.org/whl/cu80/torch-0.3.0.post4-cp35-cp35m-linux_x86_64.whl 
 RUN pip install torchvision
 RUN pip install sklearn
 
