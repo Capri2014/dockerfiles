@@ -12,6 +12,7 @@ RUN apt-get update && apt-get install -y \
 
 RUN apt-get -y build-dep python-matplotlib
 RUN pip install h5py matplotlib lmdb
+RUN pip install imageio scikit-image
 
 # get the latest pytorch
 RUN pip uninstall torch -y
